@@ -13,10 +13,17 @@
 		1BCE392B22B7767000C6CB4C /* FeedsUsecaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE392A22B7767000C6CB4C /* FeedsUsecaseMock.swift */; };
 		1BCE392D22B7775F00C6CB4C /* FeedsTableViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE392C22B7775F00C6CB4C /* FeedsTableViewModelTest.swift */; };
 		8435589B22B4EFEB00D8F777 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435589A22B4EFEB00D8F777 /* Constant.swift */; };
+		84661C5822B91C09008DC295 /* FeedsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84661C5722B91C09008DC295 /* FeedsDetailsViewModel.swift */; };
+		84661C5922B91C09008DC295 /* FeedsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84661C5722B91C09008DC295 /* FeedsDetailsViewModel.swift */; };
+		84661C5B22B920BA008DC295 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84661C5A22B920BA008DC295 /* Extensions.swift */; };
+		84661C5C22B920BA008DC295 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84661C5A22B920BA008DC295 /* Extensions.swift */; };
+		84661C5E22B93136008DC295 /* FeedsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711D22B8AEE0007B9060 /* FeedsTableViewModel.swift */; };
+		84661C5F22B9313E008DC295 /* FeedsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711A22B8AED7007B9060 /* FeedsDetailsViewController.swift */; };
+		84661C6022B93146008DC295 /* FeedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711922B8AED7007B9060 /* FeedsTableViewController.swift */; };
 		848D711722B8AECD007B9060 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711522B8AECD007B9060 /* TableViewCell.swift */; };
 		848D711822B8AECD007B9060 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848D711622B8AECD007B9060 /* TableViewCell.xib */; };
 		848D711B22B8AED7007B9060 /* FeedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711922B8AED7007B9060 /* FeedsTableViewController.swift */; };
-		848D711C22B8AED7007B9060 /* FeedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711A22B8AED7007B9060 /* FeedDetailsViewController.swift */; };
+		848D711C22B8AED7007B9060 /* FeedsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711A22B8AED7007B9060 /* FeedsDetailsViewController.swift */; };
 		848D711E22B8AEE0007B9060 /* FeedsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711D22B8AEE0007B9060 /* FeedsTableViewModel.swift */; };
 		84F306A522B23A05004D9B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F306A422B23A05004D9B32 /* AppDelegate.swift */; };
 		84F306A722B23A05004D9B32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F306A622B23A05004D9B32 /* LoginViewController.swift */; };
@@ -46,10 +53,12 @@
 		1BCE392A22B7767000C6CB4C /* FeedsUsecaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsUsecaseMock.swift; sourceTree = "<group>"; };
 		1BCE392C22B7775F00C6CB4C /* FeedsTableViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsTableViewModelTest.swift; sourceTree = "<group>"; };
 		8435589A22B4EFEB00D8F777 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		84661C5722B91C09008DC295 /* FeedsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsDetailsViewModel.swift; sourceTree = "<group>"; };
+		84661C5A22B920BA008DC295 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		848D711522B8AECD007B9060 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		848D711622B8AECD007B9060 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		848D711922B8AED7007B9060 /* FeedsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsTableViewController.swift; sourceTree = "<group>"; };
-		848D711A22B8AED7007B9060 /* FeedDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailsViewController.swift; sourceTree = "<group>"; };
+		848D711A22B8AED7007B9060 /* FeedsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsDetailsViewController.swift; sourceTree = "<group>"; };
 		848D711D22B8AEE0007B9060 /* FeedsTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsTableViewModel.swift; sourceTree = "<group>"; };
 		84F306A122B23A05004D9B32 /* WDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F306A422B23A05004D9B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,8 +94,7 @@
 		1B84ED6D22B368A60084777E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				1BCE392322B7654200C6CB4C /* Entity */,
-				1BCE392222B764DD00C6CB4C /* Usecas */,
+				84661C5322B91B50008DC295 /* Constants */,
 				1B84ED6E22B368AC0084777E /* XMLParser */,
 			);
 			path = Utils;
@@ -102,12 +110,12 @@
 			path = XMLParser;
 			sourceTree = "<group>";
 		};
-		1BCE392222B764DD00C6CB4C /* Usecas */ = {
+		1BCE392222B764DD00C6CB4C /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
 				1BCE392822B7668800C6CB4C /* FeedsUsecase.swift */,
 			);
-			path = Usecas;
+			path = Usecase;
 			sourceTree = "<group>";
 		};
 		1BCE392322B7654200C6CB4C /* Entity */ = {
@@ -119,30 +127,58 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		848D711222B8AE7A007B9060 /* Views */ = {
+		84661C5222B91B20008DC295 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1BCE392322B7654200C6CB4C /* Entity */,
+				1BCE392222B764DD00C6CB4C /* Usecase */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		84661C5322B91B50008DC295 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8435589A22B4EFEB00D8F777 /* Constant.swift */,
+				84661C5A22B920BA008DC295 /* Extensions.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		84661C5422B91B93008DC295 /* FeedsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				848D711922B8AED7007B9060 /* FeedsTableViewController.swift */,
+				848D711D22B8AEE0007B9060 /* FeedsTableViewModel.swift */,
+				84661C5522B91BA4008DC295 /* FeedsTableViewCell */,
+			);
+			path = FeedsTableView;
+			sourceTree = "<group>";
+		};
+		84661C5522B91BA4008DC295 /* FeedsTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				848D711522B8AECD007B9060 /* TableViewCell.swift */,
 				848D711622B8AECD007B9060 /* TableViewCell.xib */,
 			);
-			path = Views;
+			path = FeedsTableViewCell;
 			sourceTree = "<group>";
 		};
-		848D711322B8AE9D007B9060 /* Model */ = {
+		84661C5622B91BBC008DC295 /* FeedDetailsView */ = {
 			isa = PBXGroup;
 			children = (
-				848D711D22B8AEE0007B9060 /* FeedsTableViewModel.swift */,
+				848D711A22B8AED7007B9060 /* FeedsDetailsViewController.swift */,
+				84661C5722B91C09008DC295 /* FeedsDetailsViewModel.swift */,
 			);
-			path = Model;
+			path = FeedDetailsView;
 			sourceTree = "<group>";
 		};
-		848D711422B8AE9D007B9060 /* ViewController */ = {
+		84661C5D22B922B5008DC295 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				848D711A22B8AED7007B9060 /* FeedDetailsViewController.swift */,
-				848D711922B8AED7007B9060 /* FeedsTableViewController.swift */,
+				84F306A622B23A05004D9B32 /* LoginViewController.swift */,
 			);
-			path = ViewController;
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		84F3069822B23A05004D9B32 = {
@@ -166,10 +202,11 @@
 		84F306A322B23A05004D9B32 /* WDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84661C5222B91B20008DC295 /* Networking */,
 				1B84ED6D22B368A60084777E /* Utils */,
 				84F306C522B23D18004D9B32 /* Feeds */,
 				84F306C422B23B24004D9B32 /* Supporting Files */,
-				84F306A622B23A05004D9B32 /* LoginViewController.swift */,
+				84F306A422B23A05004D9B32 /* AppDelegate.swift */,
 				84F306A822B23A05004D9B32 /* Main.storyboard */,
 				84F306B022B23A05004D9B32 /* Info.plist */,
 			);
@@ -190,7 +227,6 @@
 		84F306C422B23B24004D9B32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				84F306A422B23A05004D9B32 /* AppDelegate.swift */,
 				84F306AB22B23A05004D9B32 /* Assets.xcassets */,
 				84F306AD22B23A05004D9B32 /* LaunchScreen.storyboard */,
 			);
@@ -200,10 +236,9 @@
 		84F306C522B23D18004D9B32 /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
-				848D711322B8AE9D007B9060 /* Model */,
-				848D711222B8AE7A007B9060 /* Views */,
-				848D711422B8AE9D007B9060 /* ViewController */,
-				8435589A22B4EFEB00D8F777 /* Constant.swift */,
+				84661C5D22B922B5008DC295 /* LoginView */,
+				84661C5422B91B93008DC295 /* FeedsTableView */,
+				84661C5622B91BBC008DC295 /* FeedDetailsView */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -314,13 +349,15 @@
 				848D711B22B8AED7007B9060 /* FeedsTableViewController.swift in Sources */,
 				1BCE392522B7659E00C6CB4C /* ResultSet.swift in Sources */,
 				8435589B22B4EFEB00D8F777 /* Constant.swift in Sources */,
+				84661C5822B91C09008DC295 /* FeedsDetailsViewModel.swift in Sources */,
 				1BCE392922B7668800C6CB4C /* FeedsUsecase.swift in Sources */,
 				848D711E22B8AEE0007B9060 /* FeedsTableViewModel.swift in Sources */,
 				1B84ED7222B368C90084777E /* XMLConverter.m in Sources */,
 				84F306CB22B35B10004D9B32 /* Feed.swift in Sources */,
+				84661C5B22B920BA008DC295 /* Extensions.swift in Sources */,
 				84F306A722B23A05004D9B32 /* LoginViewController.swift in Sources */,
 				848D711722B8AECD007B9060 /* TableViewCell.swift in Sources */,
-				848D711C22B8AED7007B9060 /* FeedDetailsViewController.swift in Sources */,
+				848D711C22B8AED7007B9060 /* FeedsDetailsViewController.swift in Sources */,
 				84F306A522B23A05004D9B32 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,9 +366,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84661C5C22B920BA008DC295 /* Extensions.swift in Sources */,
 				84F306BA22B23A05004D9B32 /* WDemoTests.swift in Sources */,
 				1BCE392B22B7767000C6CB4C /* FeedsUsecaseMock.swift in Sources */,
+				84661C5E22B93136008DC295 /* FeedsTableViewModel.swift in Sources */,
+				84661C5F22B9313E008DC295 /* FeedsDetailsViewController.swift in Sources */,
 				1BCE392D22B7775F00C6CB4C /* FeedsTableViewModelTest.swift in Sources */,
+				84661C5922B91C09008DC295 /* FeedsDetailsViewModel.swift in Sources */,
+				84661C6022B93146008DC295 /* FeedsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +528,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = U98KTBTAC9;
 				INFOPLIST_FILE = WDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -494,6 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nihilent.WDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WildCard_dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "WDemo/Utils/XMLParser/WDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -506,7 +550,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,6 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nihilent.WDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WDemo/Utils/XMLParser/WDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

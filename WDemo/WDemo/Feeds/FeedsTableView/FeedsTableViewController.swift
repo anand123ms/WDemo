@@ -15,12 +15,13 @@ class FeedsTableViewController: UITableViewController {
     var viewModel: FeedsTableViewModel!
     
     override func viewDidLoad() {
+        print("======================woof")
         viewModel = FeedsTableViewModel()
         fetchData()
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "feedViewCell")
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.title = titleString
+        self.title = AppConstants.feedsTitle
         let refereshController = UIRefreshControl()
         refereshController.addTarget(self, action: #selector(refresh), for: .valueChanged)
         self.refreshControl = refereshController
@@ -54,7 +55,7 @@ class FeedsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let feedDetailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FeedDetailsViewController") as! FeedDetailsViewController
+        let feedDetailsVC = self.viewController(withId: "FeedsDetailsViewController") as! FeedsDetailsViewController
         feedDetailsVC.link = feedsArray[indexPath.row].link
         navigationController?.pushViewController(feedDetailsVC, animated: true)
     }

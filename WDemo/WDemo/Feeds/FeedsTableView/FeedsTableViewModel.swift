@@ -12,7 +12,7 @@ import Alamofire
 class FeedsTableViewModel {
     
     var feedsUsecase: FeedsUsecaseType? = FeedsUsecase()
-
+    
     func fetchFeeds(completion: @escaping (_ result: Array<Feed>) -> Void) {
         feedsUsecase?.fetchFeeds(completion: { (result) in
             switch result {

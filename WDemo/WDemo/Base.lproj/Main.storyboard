@@ -18,16 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yS8-eA-dST">
-                                <rect key="frame" x="67.5" y="270" width="240" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yS8-eA-dST">
+                                <rect key="frame" x="56.5" y="270" width="262.5" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaW-Ud-PGK">
-                                <rect key="frame" x="67.5" y="210" width="240" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gaW-Ud-PGK">
+                                <rect key="frame" x="56.5" y="210" width="262.5" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="bPV-Op-0gz"/>
                                     <constraint firstAttribute="height" constant="40" id="wpf-Tr-00d"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -42,7 +41,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOb-jl-wvh">
-                                <rect key="frame" x="67.5" y="330" width="240" height="40"/>
+                                <rect key="frame" x="56.5" y="330" width="262.5" height="40"/>
                                 <color key="backgroundColor" red="0.066666666666666666" green="0.5607843137254902" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Login">
@@ -54,6 +53,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="gaW-Ud-PGK" firstAttribute="centerX" secondItem="Psh-OZ-AhY" secondAttribute="centerX" id="2OV-Jn-iKH"/>
                             <constraint firstItem="Psh-OZ-AhY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="72j-aO-JJw"/>
@@ -64,22 +64,31 @@
                             <constraint firstItem="GOb-jl-wvh" firstAttribute="centerX" secondItem="yS8-eA-dST" secondAttribute="centerX" id="GoY-Ao-lUr"/>
                             <constraint firstItem="gaW-Ud-PGK" firstAttribute="top" secondItem="Psh-OZ-AhY" secondAttribute="bottom" constant="40" id="XqR-vk-npD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GOb-jl-wvh" secondAttribute="bottom" constant="100" id="aDu-Sk-UW9"/>
+                            <constraint firstItem="gaW-Ud-PGK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="dQA-Tx-6FS"/>
                             <constraint firstItem="GOb-jl-wvh" firstAttribute="height" secondItem="yS8-eA-dST" secondAttribute="height" id="leU-6r-I3Y"/>
                             <constraint firstItem="GOb-jl-wvh" firstAttribute="width" secondItem="yS8-eA-dST" secondAttribute="width" id="lqj-IU-beH"/>
                             <constraint firstItem="yS8-eA-dST" firstAttribute="centerX" secondItem="gaW-Ud-PGK" secondAttribute="centerX" id="web-Qx-Olw"/>
                             <constraint firstItem="yS8-eA-dST" firstAttribute="width" secondItem="gaW-Ud-PGK" secondAttribute="width" id="xKT-Gr-6Ya"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="83N-4n-a4V" appends="YES" id="vWc-T6-qoQ"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="p05-Q0-lDJ"/>
                     <connections>
                         <outlet property="passwordField" destination="yS8-eA-dST" id="peW-Ht-C6f"/>
                         <outlet property="userNameField" destination="gaW-Ud-PGK" id="xPx-3I-hSP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="83N-4n-a4V" userLabel="End Editing Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="endEditing:" destination="BYZ-38-t0r" id="EQy-Ey-DcI"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="8eH-YL-AAd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="769" y="538"/>
+            <point key="canvasLocation" x="1455" y="77"/>
         </scene>
         <!--Feeds Table View Controller-->
         <scene sceneID="EOf-HG-947">
@@ -98,7 +107,6 @@
                             <outlet property="delegate" destination="kfK-jN-2q9" id="1Qh-J8-10y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PIW-mF-rXQ"/>
                     <connections>
                         <outlet property="activityIndicator" destination="qjw-o2-CeH" id="Ua1-ev-Tkn"/>
                     </connections>
@@ -107,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="2700" y="26.53673163418291"/>
         </scene>
-        <!--Feed Details View Controller-->
+        <!--Feeds Details View Controller-->
         <scene sceneID="9E5-uq-xbg">
             <objects>
-                <viewController storyboardIdentifier="FeedDetailsViewController" id="Na8-su-KdR" customClass="FeedDetailsViewController" customModule="WDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedsDetailsViewController" id="Na8-su-KdR" customClass="FeedsDetailsViewController" customModule="WDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4D1-xD-iDv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,30 +148,12 @@
                     </view>
                     <connections>
                         <outlet property="activeIndicator" destination="pYh-rs-ZxP" id="8NZ-U6-UuO"/>
-                        <outlet property="feedDetailsWebView" destination="y7s-0T-t17" id="SCK-Q5-1e1"/>
+                        <outlet property="feedsDetailsWebView" destination="y7s-0T-t17" id="iPp-Hf-p1P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Req-Ji-zs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3564" y="40.929535232383813"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cc7-VL-fn8">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E1e-pK-iCm" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G7o-NO-0Jq">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kfK-jN-2q9" kind="relationship" relationship="rootViewController" id="RrB-51-66b"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cEK-F8-pMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1760.8" y="26.53673163418291"/>
         </scene>
     </scenes>
     <resources>

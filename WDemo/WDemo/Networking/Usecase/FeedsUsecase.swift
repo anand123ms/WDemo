@@ -15,7 +15,7 @@ protocol FeedsUsecaseType: class {
 
 class FeedsUsecase: FeedsUsecaseType {
     func fetchFeeds(completion: @escaping (ResultSet<[Feed]>) -> Void) {
-        Alamofire.request(url).responseJSON { [weak self]response in
+        Alamofire.request(URLConstants.url).responseJSON { [weak self]response in
             if let data = response.data {
                 XMLConverter.convertXMLData(data, completion: { (flag,  dictionary, error) in
                     if (error != nil) {
@@ -23,7 +23,7 @@ class FeedsUsecase: FeedsUsecaseType {
                     }
                     
                     var nsmutableDictionary = dictionary
-                    if (NetworkReachabilityManager()!.isReachable) {
+                    if (NetworkReachabilityManager()?.isReachable ?? false) {
                         if let datsDictionary = nsmutableDictionary {
                             self?.saveDataOffline(data: datsDictionary)
                         }
@@ -31,7 +31,7 @@ class FeedsUsecase: FeedsUsecaseType {
                         nsmutableDictionary = self?.reterviewData()
                     }
                     
-                    let channel = (((nsmutableDictionary?.value(forKey: "rss") as? NSDictionary)?.value(forKey: "channel") as? NSDictionary) as? NSDictionary)?.value(forKey: "item")
+                    let channel = (((nsmutableDictionary?.value(forKey: "rss") as? NSDictionary)?.value(forKey: "channel") as? NSDictionary))?.value(forKey: "item")
                     var feedsArray = [Feed]()
                     let feedsItemsArray = (channel as? NSArray) ?? []
                     if feedsItemsArray.count > 0 {

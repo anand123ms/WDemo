@@ -6,6 +6,7 @@ target 'WDemo' do
   use_frameworks!
    pod 'Alamofire'
    pod 'Kingfisher', '~> 4.0'
+   pod 'SwiftKeychainWrapper'
 
   target 'WDemoTests' do
     inherit! :search_paths
