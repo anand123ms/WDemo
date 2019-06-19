@@ -12,7 +12,6 @@ import WebKit
 import Alamofire
 
 class FeedsDetailsViewController: UIViewController ,WKNavigationDelegate {
-    var viewModel: FeedsDetailsViewModel!
     @IBOutlet weak var activeIndicator: UIActivityIndicatorView!
     @IBOutlet weak var feedsDetailsWebView: WKWebView!
     var link:String?

@@ -15,7 +15,6 @@ class FeedsTableViewController: UITableViewController {
     var viewModel: FeedsTableViewModel!
     
     override func viewDidLoad() {
-        print("======================woof")
         viewModel = FeedsTableViewModel()
         fetchData()
         let nib = UINib(nibName: "TableViewCell", bundle: nil)

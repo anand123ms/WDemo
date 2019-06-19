@@ -26,4 +26,5 @@ public struct KeyConstants {
     static let kUsername = "username"
     static let kPassword = "password"
     static let kIsFirstLaunch = "isFirstLaunch"
+    static let kFirstTimeLogin = "isFirstTimeLogin"
 }

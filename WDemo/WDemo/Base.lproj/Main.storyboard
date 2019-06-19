@@ -51,12 +51,50 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9LO-8S-F83"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6O-bJ-9gx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT6-xb-nnB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="494"/>
+                                    </scrollView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YW6-uf-1ZC">
+                                        <rect key="frame" x="168" y="525" width="39" height="37"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNg-bI-Htf">
+                                        <rect key="frame" x="145" y="597" width="91" height="33"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Get Started">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kow-mE-INo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.19379340277777779" alpha="0.73964576198630139" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YW6-uf-1ZC" firstAttribute="leading" secondItem="l6O-bJ-9gx" secondAttribute="leading" constant="168" id="Kdo-i3-IAe"/>
+                                    <constraint firstItem="tNg-bI-Htf" firstAttribute="leading" secondItem="l6O-bJ-9gx" secondAttribute="leading" constant="145" id="Ol2-5B-1Tg"/>
+                                    <constraint firstItem="kT6-xb-nnB" firstAttribute="leading" secondItem="l6O-bJ-9gx" secondAttribute="leading" id="Yzn-Ko-SZy"/>
+                                    <constraint firstItem="YW6-uf-1ZC" firstAttribute="top" secondItem="kT6-xb-nnB" secondAttribute="bottom" constant="31" id="d35-wk-KHk"/>
+                                    <constraint firstAttribute="trailing" secondItem="kT6-xb-nnB" secondAttribute="trailing" id="oAb-lr-CaC"/>
+                                    <constraint firstItem="kT6-xb-nnB" firstAttribute="top" secondItem="l6O-bJ-9gx" secondAttribute="top" id="qDh-hP-oZ3"/>
+                                    <constraint firstAttribute="bottom" secondItem="tNg-bI-Htf" secondAttribute="bottom" constant="37" id="qgf-41-cIx"/>
+                                    <constraint firstAttribute="trailing" secondItem="YW6-uf-1ZC" secondAttribute="trailing" constant="168" id="uE8-Le-Jtm"/>
+                                    <constraint firstAttribute="trailing" secondItem="tNg-bI-Htf" secondAttribute="trailing" constant="139" id="uEu-gY-Y8k"/>
+                                    <constraint firstItem="tNg-bI-Htf" firstAttribute="top" secondItem="YW6-uf-1ZC" secondAttribute="bottom" constant="35" id="vnf-FJ-mXO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="l6O-bJ-9gx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1qA-jG-atI"/>
                             <constraint firstItem="gaW-Ud-PGK" firstAttribute="centerX" secondItem="Psh-OZ-AhY" secondAttribute="centerX" id="2OV-Jn-iKH"/>
                             <constraint firstItem="Psh-OZ-AhY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="72j-aO-JJw"/>
+                            <constraint firstItem="l6O-bJ-9gx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9QT-t3-5Zd"/>
+                            <constraint firstItem="l6O-bJ-9gx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9se-fM-Ldg"/>
                             <constraint firstItem="yS8-eA-dST" firstAttribute="top" secondItem="gaW-Ud-PGK" secondAttribute="bottom" constant="20" id="AbP-tg-Gct"/>
                             <constraint firstItem="Psh-OZ-AhY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="CjO-pK-YwG"/>
                             <constraint firstItem="GOb-jl-wvh" firstAttribute="top" secondItem="yS8-eA-dST" secondAttribute="bottom" constant="20" id="Clf-uQ-Txd"/>
@@ -67,6 +105,7 @@
                             <constraint firstItem="gaW-Ud-PGK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="dQA-Tx-6FS"/>
                             <constraint firstItem="GOb-jl-wvh" firstAttribute="height" secondItem="yS8-eA-dST" secondAttribute="height" id="leU-6r-I3Y"/>
                             <constraint firstItem="GOb-jl-wvh" firstAttribute="width" secondItem="yS8-eA-dST" secondAttribute="width" id="lqj-IU-beH"/>
+                            <constraint firstItem="l6O-bJ-9gx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mzT-u9-3vq"/>
                             <constraint firstItem="yS8-eA-dST" firstAttribute="centerX" secondItem="gaW-Ud-PGK" secondAttribute="centerX" id="web-Qx-Olw"/>
                             <constraint firstItem="yS8-eA-dST" firstAttribute="width" secondItem="gaW-Ud-PGK" secondAttribute="width" id="xKT-Gr-6Ya"/>
                         </constraints>
@@ -76,8 +115,11 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="pageControl" destination="YW6-uf-1ZC" id="Ejz-ie-uDE"/>
                         <outlet property="passwordField" destination="yS8-eA-dST" id="peW-Ht-C6f"/>
+                        <outlet property="scrollView" destination="kT6-xb-nnB" id="dmo-Wp-VEN"/>
                         <outlet property="userNameField" destination="gaW-Ud-PGK" id="xPx-3I-hSP"/>
+                        <outlet property="walkthroughView" destination="l6O-bJ-9gx" id="J5S-4s-MJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,7 +130,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1455" y="77"/>
+            <point key="canvasLocation" x="1453.5999999999999" y="76.911544227886068"/>
         </scene>
         <!--Feeds Table View Controller-->
         <scene sceneID="EOf-HG-947">
