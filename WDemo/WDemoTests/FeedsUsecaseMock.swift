@@ -11,6 +11,7 @@ import WDemo
 @testable import WDemo
 
 class FeedsUsecaseMock: FeedsUsecaseType {
+    let test = FeedsUsecase()
     
     func fetchFeeds(completion: @escaping (ResultSet<[Feed]>) -> Void) {
         let jsonString = """

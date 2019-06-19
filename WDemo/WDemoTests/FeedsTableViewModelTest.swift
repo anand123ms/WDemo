@@ -23,11 +23,11 @@ class FeedsTableViewModelTest: XCTestCase {
         super.tearDown()
     }
     
-    func testfetchFeeds() {
+    func testfetchFeedSuccess() {
         let exp = expectation(description: "Feeds data fetch successfully")
         viewModel.fetchFeeds { feedsArray in
             if feedsArray.count > 0 {
-                 exp.fulfill()
+                exp.fulfill()
             }
         }
         waitForExpectations(timeout: 5) { (error) in
@@ -36,3 +36,4 @@ class FeedsTableViewModelTest: XCTestCase {
         }
     }
 }
+

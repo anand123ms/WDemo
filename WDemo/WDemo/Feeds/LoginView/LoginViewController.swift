@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         viewModel = LoginViewModel()
-        if !UserDefaults.standard.bool(forKey: KeyConstants.kFirstTimeLogin) {
+        if UserDefaults.standard.bool(forKey: KeyConstants.kIsFirstLaunch) {
             walkthroughView.isHidden = false
             walkthroughScreens()
             pageControl.currentPage = 0
@@ -60,9 +60,8 @@ class LoginViewController: UIViewController {
              let feedsTableViewController = self.viewController(withId: "FeedsTableViewController") as! FeedsTableViewController
              let navigationController = UINavigationController.init(rootViewController: feedsTableViewController)
             self.present(navigationController, animated: true) { [weak self] in
-            let _ = self?.viewModel.saveCredentials(username: self?.userNameField.text, password: self?.passwordField.text)
+            self?.viewModel.saveCredentials(username: self?.userNameField.text, password: self?.passwordField.text)
             }
-            UserDefaults.standard.set(true, forKey: KeyConstants.kFirstTimeLogin)
         } else {
             self.showAlert(withTitle: AppConstants.kError, message: AppConstants.loginErrorMessage)
             return

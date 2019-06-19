@@ -21,13 +21,11 @@ class LoginViewModel {
         static let password = "admin"
     }
     
-    func saveCredentials(username: String?, password: String?) -> Bool {
+    func saveCredentials(username: String?, password: String?) {
         if let usernameString = username, usernameString.count > 0, let passwordString = password, passwordString.count > 0 {
             KeychainWrapper.standard.set(usernameString, forKey: KeyConstants.kUsername)
             KeychainWrapper.standard.set(passwordString, forKey: KeyConstants.kPassword)
-            return true
         }
-        return false
     }
     
     func isUserValid(username: String?, password: String?) -> Bool {

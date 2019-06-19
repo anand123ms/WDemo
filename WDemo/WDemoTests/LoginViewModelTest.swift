@@ -8,6 +8,7 @@
 
 import XCTest
 import WDemo
+import SwiftKeychainWrapper
 @testable import WDemo
 
 
@@ -15,6 +16,7 @@ class LoginViewModelTest: XCTestCase {
     var viewModel: LoginViewModel!
     
     override func setUp() {
+        super.setUp()
         viewModel = LoginViewModel()
     }
 
@@ -30,10 +32,11 @@ class LoginViewModelTest: XCTestCase {
         XCTAssertFalse(isNotValid)
     }
     
-    func testSaveData() {
-     let isSaved = viewModel.saveCredentials(username: "admin", password: "admin")
-        XCTAssertEqual(isSaved, true)
-     let isNotSaved = viewModel.saveCredentials(username: "", password: "admin")
-        XCTAssertFalse(isNotSaved)
+    func testCredentials() {
+       viewModel.saveCredentials(username: "admin", password: "admin")
+        let username = KeychainWrapper.standard.string(forKey: KeyConstants.kUsername)
+        let password = KeychainWrapper.standard.string(forKey: KeyConstants.kPassword)
+        XCTAssertEqual(username, "admin", "Username should match")
+        XCTAssertEqual(password, "admin", "password should match")
     }
 }
