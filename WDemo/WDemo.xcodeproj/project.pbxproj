@@ -8,16 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1B84ED7222B368C90084777E /* XMLConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84ED7022B368C90084777E /* XMLConverter.m */; };
-		1BCE392522B7659E00C6CB4C /* ResultSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE392422B7659E00C6CB4C /* ResultSet.swift */; };
 		1BCE392922B7668800C6CB4C /* FeedsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE392822B7668800C6CB4C /* FeedsUsecase.swift */; };
 		1BCE392B22B7767000C6CB4C /* FeedsUsecaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE392A22B7767000C6CB4C /* FeedsUsecaseMock.swift */; };
 		1BCE392D22B7775F00C6CB4C /* FeedsTableViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE392C22B7775F00C6CB4C /* FeedsTableViewModelTest.swift */; };
+		8417ED8322BA164000D57F9C /* ResultSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE392422B7659E00C6CB4C /* ResultSet.swift */; };
 		8435589B22B4EFEB00D8F777 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435589A22B4EFEB00D8F777 /* Constant.swift */; };
 		84661C5B22B920BA008DC295 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84661C5A22B920BA008DC295 /* Extensions.swift */; };
-		84661C5C22B920BA008DC295 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84661C5A22B920BA008DC295 /* Extensions.swift */; };
-		84661C5E22B93136008DC295 /* FeedsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711D22B8AEE0007B9060 /* FeedsTableViewModel.swift */; };
-		84661C5F22B9313E008DC295 /* FeedsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711A22B8AED7007B9060 /* FeedsDetailsViewController.swift */; };
-		84661C6022B93146008DC295 /* FeedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711922B8AED7007B9060 /* FeedsTableViewController.swift */; };
 		848D711722B8AECD007B9060 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711522B8AECD007B9060 /* TableViewCell.swift */; };
 		848D711822B8AECD007B9060 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848D711622B8AECD007B9060 /* TableViewCell.xib */; };
 		848D711B22B8AED7007B9060 /* FeedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D711922B8AED7007B9060 /* FeedsTableViewController.swift */; };
@@ -343,11 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				848D711B22B8AED7007B9060 /* FeedsTableViewController.swift in Sources */,
-				1BCE392522B7659E00C6CB4C /* ResultSet.swift in Sources */,
 				8435589B22B4EFEB00D8F777 /* Constant.swift in Sources */,
 				1BCE392922B7668800C6CB4C /* FeedsUsecase.swift in Sources */,
 				848D711E22B8AEE0007B9060 /* FeedsTableViewModel.swift in Sources */,
 				1B84ED7222B368C90084777E /* XMLConverter.m in Sources */,
+				8417ED8322BA164000D57F9C /* ResultSet.swift in Sources */,
 				84F306CB22B35B10004D9B32 /* Feed.swift in Sources */,
 				84661C5B22B920BA008DC295 /* Extensions.swift in Sources */,
 				84F306A722B23A05004D9B32 /* LoginViewController.swift in Sources */,
@@ -361,13 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84661C5C22B920BA008DC295 /* Extensions.swift in Sources */,
 				84F306BA22B23A05004D9B32 /* WDemoTests.swift in Sources */,
 				1BCE392B22B7767000C6CB4C /* FeedsUsecaseMock.swift in Sources */,
-				84661C5E22B93136008DC295 /* FeedsTableViewModel.swift in Sources */,
-				84661C5F22B9313E008DC295 /* FeedsDetailsViewController.swift in Sources */,
 				1BCE392D22B7775F00C6CB4C /* FeedsTableViewModelTest.swift in Sources */,
-				84661C6022B93146008DC295 /* FeedsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
