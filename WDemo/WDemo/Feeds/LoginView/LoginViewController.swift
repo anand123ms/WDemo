@@ -16,15 +16,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var walkthroughView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    var viewModel: LoginViewModel!
     
     let imageArray = [UIImage(named: "login"), UIImage(named: "feeds"), UIImage(named: "feedsDetail") ]
     
-    struct DefaultUserCredentials {
-        static let username = "admin"
-        static let password = "admin"
-    }
-    
     override func viewDidLoad() {
+        viewModel = LoginViewModel()
         if !UserDefaults.standard.bool(forKey: KeyConstants.kFirstTimeLogin) {
             walkthroughView.isHidden = false
             walkthroughScreens()
@@ -59,24 +56,16 @@ class LoginViewController: UIViewController {
             self.showAlert(withTitle: AppConstants.kError, message: AppConstants.internetErrorMessage)
             return
         }
-        
-        if (userNameField.text == DefaultUserCredentials.username && passwordField.text == DefaultUserCredentials.password)  {
+        if (viewModel.isUserValid(username: userNameField.text, password: passwordField.text))  {
              let feedsTableViewController = self.viewController(withId: "FeedsTableViewController") as! FeedsTableViewController
              let navigationController = UINavigationController.init(rootViewController: feedsTableViewController)
             self.present(navigationController, animated: true) { [weak self] in
-                self?.saveCredentials(username: self?.userNameField.text, password: self?.passwordField.text)
+            let _ = self?.viewModel.saveCredentials(username: self?.userNameField.text, password: self?.passwordField.text)
             }
             UserDefaults.standard.set(true, forKey: KeyConstants.kFirstTimeLogin)
         } else {
             self.showAlert(withTitle: AppConstants.kError, message: AppConstants.loginErrorMessage)
             return
-        }
-    }
-    
-    func saveCredentials(username: String?, password: String?) {
-        if let usernameString = username, let passwordString = password {
-            KeychainWrapper.standard.set(usernameString, forKey: KeyConstants.kUsername)
-            KeychainWrapper.standard.set(passwordString, forKey: KeyConstants.kPassword)
         }
     }
 }
